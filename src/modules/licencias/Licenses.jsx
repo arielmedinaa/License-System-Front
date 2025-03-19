@@ -66,16 +66,22 @@ const Licenses = () => {
         selectedFilter={selectedFilter}
         setShowModal={setShowModal}
         setSelectedFilter={setSelectedFilter}
-        searchQuery={searchQuery} />
+        searchQuery={searchQuery}
+      />
 
       <div className="bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
-        <TableLicenses paginatedLicenses={paginatedLicenses} getStatusColor={getStatusColor} />
+        <TableLicenses
+          paginatedLicenses={paginatedLicenses}
+          getStatusColor={getStatusColor}
+        />
+        
         <Pagination
           totalPages={totalPages}
           changePage={changePage}
           currentPage={currentPage}
           licensesPerPage={licensesPerPage}
-          filteredLicenses={filteredLicenses} />
+          filteredLicenses={filteredLicenses}
+        />
       </div>
 
       {showModal && (
